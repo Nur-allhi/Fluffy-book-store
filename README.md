@@ -13,3 +13,11 @@
 #### cheanges
 
 - Responsive navbar build
+
+### Version 0.3
+
+#### cheanges
+
+- Home page build
+- Amdin || book add option build
+- slight responsive

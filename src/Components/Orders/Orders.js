@@ -3,10 +3,10 @@ import React from "react";
 const Orders = () => {
   return (
     <div>
-      <h1>This is order page</h1>
+      <h2>Check Out</h2>
+      <div></div>
     </div>
   );
 };
 
 export default Orders;
-<h1>This is order page</h1>;

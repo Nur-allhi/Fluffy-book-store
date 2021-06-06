@@ -1,0 +1,33 @@
+.all-books {
+  text-align: center;
+  background-color: rgb(214, 240, 240);
+  width: 350px;
+  margin: 1rem 0.8rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.all-books img {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+}
+.name-author {
+  text-align: left;
+  margin-left: 2.2rem;
+}
+.buy-book {
+  display: flex;
+  justify-content: space-around;
+}
+.buy-book p {
+  font-size: 1.5rem;
+}
+.buy-book button {
+  background-color: rgb(235, 22, 15);
+  color: white;
+  font-size: 1rem;
+  width: 90px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}

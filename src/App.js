@@ -7,13 +7,14 @@ import Header from "./Components/Header/Header.jsx";
 import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
 import { createContext, useState } from "react";
+import Footer from "./Components/Footer/Footer";
 
-const userContext = createContext();
+export const userContext = createContext();
 
 function App() {
-  const [loggedInUser, SetLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <userContext.Provider value={[loggedInUser, SetLoggedInUser]}>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
         <Switch>
@@ -33,6 +34,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </userContext.Provider>
   );
