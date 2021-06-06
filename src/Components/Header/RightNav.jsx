@@ -8,10 +8,22 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   li {
     padding: 18px 10px;
+    color: black;
+    font-weight: 500;
   }
   a{
     text-decoration: none;
   }
+  button{
+    background-color: rgb(235, 22, 15);
+  color: white;
+  font-size: 1rem;
+  width: 90px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  }
+  
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: #0D2538;
@@ -24,7 +36,7 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-      color: #fff;
+      color: #FFF;
     }
   }
 `;
@@ -37,7 +49,8 @@ const RightNav = ({ open }) => {
       </Link>
       <Link to="/orders"><li>Orders</li></Link>
       <Link to="/admin"><li>Admin</li></Link>
-      <Link to="/login"><li>
+      <Link to="/login">
+      <li>
         <button>Login</button>
       </li>
       </Link>

@@ -21,3 +21,10 @@
 - Home page build
 - Amdin || book add option build
 - slight responsive
+
+### Version 0.4
+
+#### cheanges
+
+- Inventory managment base created
+- Nav bar customized

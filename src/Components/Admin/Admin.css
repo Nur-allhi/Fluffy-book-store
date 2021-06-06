@@ -1,0 +1,13 @@
+.admin-wrapper {
+  margin: 30px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 768) {
+  .admin-wrapper {
+    flex-direction: column;
+  }
+}
