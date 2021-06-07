@@ -8,21 +8,23 @@ import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
 import { createContext, useState } from "react";
 import Footer from "./Components/Footer/Footer";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
-export const userContext = createContext();
+export const userData = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <userData.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
         <Switch>
-          <Route path="/orders">
+          <Route path="/orders/:id">
             <Orders />
           </Route>
           <Route path="/admin">
             <Admin />
+            <PrivateRoute />
           </Route>
           <Route path="/login">
             <Login />
@@ -36,7 +38,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </userContext.Provider>
+    </userData.Provider>
   );
 }
 

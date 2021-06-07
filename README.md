@@ -28,3 +28,12 @@
 
 - Inventory managment base created
 - Nav bar customized
+
+### Version 0.5
+
+#### cheanges
+
+- Home image resized.
+- Card resized.
+- Authenticasion added.
+- Order can be send to data base.

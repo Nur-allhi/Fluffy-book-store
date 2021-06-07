@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import styled from 'styled-components';
-import { userContext } from '../../App';
+import { userData } from '../../App';
 import HamBurger from './HamBurger';
 
 const Nav = styled.nav`
@@ -20,7 +20,7 @@ const Nav = styled.nav`
 
 
 const Header = () => {
-  const {loggedInUser,setLoggedInUser} = useContext(userContext)
+  const {loggedInUser,setLoggedInUser} = useContext(userData)
   
   return (
     <Nav>

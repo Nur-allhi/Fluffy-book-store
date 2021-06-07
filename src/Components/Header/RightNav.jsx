@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom"
+import { userData } from '../../App';
 
 const Ul = styled.ul`
   list-style: none;
@@ -42,6 +43,7 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open }) => {
+  const [loggedInUser] = useContext(userData)
   return (
     <Ul open={open}>
       <Link to="/">
@@ -51,9 +53,10 @@ const RightNav = ({ open }) => {
       <Link to="/admin"><li>Admin</li></Link>
       <Link to="/login">
       <li>
-        <button>Login</button>
+          <button>Login</button>
       </li>
       </Link>
+      <li>{ loggedInUser.displayName}</li>
     </Ul>
   )
 }

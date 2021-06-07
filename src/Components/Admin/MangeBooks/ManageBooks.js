@@ -3,7 +3,7 @@ import "./ManageBooks..css";
 
 const ManageBooks = () => {
   return (
-    <div className="wrapper">
+    <div className="managebook-wrapper">
       <h1>manage books is in maintainence</h1>
     </div>
   );

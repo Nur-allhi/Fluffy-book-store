@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 85vw;
 }
 @media (max-width: 768px) {
   .books-wraper {
