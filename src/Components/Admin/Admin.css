@@ -1,9 +1,15 @@
 .admin-wrapper {
-  margin: 30px;
+  /* margin: 30px; */
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.managebook-wrapper {
+  border: 2px solid gray;
+  width: 65%;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 @media (max-width: 768) {

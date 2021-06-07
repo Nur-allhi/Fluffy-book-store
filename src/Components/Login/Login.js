@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Login.css";
 import { userData } from "../../App";
 import {
+  handleAuthToken,
   handleGoogleSignIn,
   initializeAppLoginFrameWork,
 } from "./LoginManager";
@@ -25,8 +26,12 @@ const Login = () => {
 
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
+      storeAuthToken();
       handleResponse(res, true);
     });
+  };
+  const storeAuthToken = () => {
+    handleAuthToken().then((res) => sessionStorage.setItem("idToken", res));
   };
 
   return (

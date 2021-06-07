@@ -19,7 +19,8 @@ const Ul = styled.ul`
     background-color: rgb(235, 22, 15);
   color: white;
   font-size: 1rem;
-  width: 90px;
+  padding: 0 15px;
+  width: auto;
   height: 30px;
   border: none;
   border-radius: 10px;
@@ -52,11 +53,10 @@ const RightNav = ({ open }) => {
       <Link to="/orders"><li>Orders</li></Link>
       <Link to="/admin"><li>Admin</li></Link>
       <Link to="/login">
-      <li>
-          <button>Login</button>
+        <li>
+          <button>{ loggedInUser.email ? loggedInUser.displayName : "Login"}</button>
       </li>
       </Link>
-      <li>{ loggedInUser.displayName}</li>
     </Ul>
   )
 }

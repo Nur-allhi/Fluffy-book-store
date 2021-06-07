@@ -19,13 +19,12 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/orders/:id">
+          <PrivateRoute path="/orders">
             <Orders />
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin />
-            <PrivateRoute />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>

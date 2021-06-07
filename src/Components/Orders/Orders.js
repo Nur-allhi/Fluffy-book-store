@@ -1,19 +1,33 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router";
+import React, { useContext, useEffect, useState } from "react";
+import { userData } from "../../App";
+import CheckOut from "./CheckOut";
 
 const Orders = () => {
-  const { id } = useParams();
+  const [orders, setOrders] = useState([]);
+  const [loggedInUser] = useContext(userData);
 
-  // useEffect(() => {
-  //   const url = "http://localhost:5000/orders";
-  //   fetch(url).then(res)
-  // }, []);
+  useEffect(() => {
+    const url =
+      "http://localhost:5000/previousOrders?email=" + loggedInUser.email;
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        authorization: `Bearer ${sessionStorage.getItem("idToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setOrders(data);
+      });
+  }, [loggedInUser.email]);
 
   return (
     <div>
-      <h2>Check Out</h2>
-      <h2>Product id: {id}</h2>
-      {/* <table></table> */}
+      <h2>{orders.length} order you have in a row</h2>
+      {orders.map((orders) => (
+        <CheckOut key={orders._id} orders={orders}></CheckOut>
+      ))}
     </div>
   );
 };

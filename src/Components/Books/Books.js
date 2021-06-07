@@ -1,14 +1,16 @@
-import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router";
+import React, { useContext } from "react";
+import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 import { userData } from "../../App";
+
 import "./Books.css";
 // import userData from "../../App";
 
 const Books = (props) => {
   const [loggedInUser] = useContext(userData);
   const { email } = loggedInUser;
-  const { _id, name, author, price, imageURL } = props.books;
+  const { name, author, price, imageURL } = props.books;
+
   const handleBuyBook = () => {
     const orderData = {
       email: email,
@@ -16,11 +18,19 @@ const Books = (props) => {
       price: price,
     };
 
-    fetch("http://localhost:5000/getOrder", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orderData),
-    });
+    if (loggedInUser.email) {
+      fetch("http://localhost:5000/getOrder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderData),
+      });
+    } else {
+      <Redirect
+        to={{
+          pathname: "/login",
+        }}
+      />;
+    }
   };
 
   return (
@@ -34,7 +44,7 @@ const Books = (props) => {
       </div>
       <div className="buy-book">
         <p>Price: ${price}</p>
-        <Link to={/orders/}>
+        <Link to="/orders">
           <button onClick={() => handleBuyBook()}>Buy Now</button>
         </Link>
       </div>

@@ -37,3 +37,12 @@
 - Card resized.
 - Authenticasion added.
 - Order can be send to data base.
+
+### Version 0.6
+
+#### cheanges
+
+- Auth verfication added.
+- order page builded.
+
+* manage Books Arranged
