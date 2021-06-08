@@ -46,3 +46,10 @@
 - order page builded.
 
 * manage Books Arranged
+
+### Version 0.7
+
+#### cheanges
+
+- Delete system working
+- server link changed to go online

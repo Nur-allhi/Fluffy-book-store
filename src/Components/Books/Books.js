@@ -19,7 +19,7 @@ const Books = (props) => {
     };
 
     if (loggedInUser.email) {
-      fetch("http://localhost:5000/getOrder", {
+      fetch("https://fluffy-book-store-server.herokuapp.com/getOrder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),

@@ -5,21 +5,11 @@ const ManageBooks = (props) => {
   const { _id, name, author, price } = props.books;
 
   const handleDelete = (id) => {
-    console.log(id);
-    // fetch(`http://localhost:5000//deleteBook/${id}`, { method: "DELETE" }).then(
-    //   (res) => console.log(res)
-    // );
-    // useEffect(() => {
-    //   const url = `http://localhost:5000//deleteBook/${id}`;
-    //   fetch(url, {
-    //     method: "DELETE",
-    //   }).then((result) => {
-    //     console.log(result);
-    //     // if (result) {
-    //     //   event.target.perentNode.style.display = "none";
-    //     // }
-    //   });
-    // }, []);
+    fetch(`https://fluffy-book-store-server.herokuapp.com/deleteBook/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
   };
   return (
     <div>
