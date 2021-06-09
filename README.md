@@ -66,4 +66,10 @@
 
 - Design also done.
 
+### Version 1.0
+
+#### cheanges
+
+- Sign out added
+
 ##### Thank you.

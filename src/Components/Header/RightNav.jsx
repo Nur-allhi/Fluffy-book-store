@@ -59,7 +59,9 @@ const RightNav = ({ open }) => {
       <li>{ loggedInUser.displayName}</li>
       {
         loggedInUser.email ? <li>
+          <Link to="/">
           <button onClick={() => handleSignOut()}>Sign out</button> 
+          </Link>
       </li> : <Link to="/login">
         <li>
           {
