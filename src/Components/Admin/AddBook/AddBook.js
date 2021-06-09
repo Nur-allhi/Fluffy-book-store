@@ -19,7 +19,7 @@ const AddBook = () => {
       price: Number(data.price),
       imageURL: imageURL,
     };
-    const url = `https://fluffy-book-store-server.herokuapp.com/addBook`;
+    const url = `http://localhost:5000/addBook`;
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

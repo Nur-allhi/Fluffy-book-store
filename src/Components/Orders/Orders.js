@@ -8,8 +8,7 @@ const Orders = () => {
 
   useEffect(() => {
     const url =
-      "https://fluffy-book-store-server.herokuapp.com/previousOrders?email=" +
-      loggedInUser.email;
+      "http://localhost:5000/previousOrders?email=" + loggedInUser.email;
     fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +20,7 @@ const Orders = () => {
       .then((data) => {
         setOrders(data);
       });
-  }, [loggedInUser.email]);
+  }, []);
 
   return (
     <div>

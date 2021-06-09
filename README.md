@@ -53,3 +53,9 @@
 
 - Delete system working
 - server link changed to go online
+
+### Version 0.8
+
+#### cheanges
+
+- Functional work is complete.

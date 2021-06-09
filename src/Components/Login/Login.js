@@ -31,7 +31,9 @@ const Login = () => {
     });
   };
   const storeAuthToken = () => {
-    handleAuthToken().then((res) => sessionStorage.setItem("idToken", res));
+    handleAuthToken().then((res) => {
+      sessionStorage.setItem("idToken", res);
+    });
   };
 
   return (

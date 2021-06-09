@@ -6,7 +6,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    const url = "https://fluffy-book-store-server.herokuapp.com/books";
+    const url = "http://localhost:5000/books";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setBooks(data));

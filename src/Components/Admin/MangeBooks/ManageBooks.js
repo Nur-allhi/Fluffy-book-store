@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./ManageBooks..css";
 
 const ManageBooks = (props) => {
   const { _id, name, author, price } = props.books;
 
   const handleDelete = (id) => {
-    fetch(`https://fluffy-book-store-server.herokuapp.com/deleteBook/${id}`, {
+    fetch(`http://localhost:5000/deleteBook/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
