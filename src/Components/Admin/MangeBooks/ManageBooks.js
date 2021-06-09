@@ -5,7 +5,7 @@ const ManageBooks = (props) => {
   const { _id, name, author, price } = props.books;
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteBook/${id}`, {
+    fetch(`https://fluffy-book-store-server.herokuapp.com/deleteBook/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
