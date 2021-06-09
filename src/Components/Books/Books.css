@@ -7,6 +7,9 @@
   font-weight: 700;
   border-radius: 1rem;
 }
+.all-books:hover {
+  background-color: rgb(167, 219, 219);
+}
 .all-books img {
   width: 260px;
   height: 350px;
@@ -24,11 +27,15 @@
   font-size: 1.5rem;
 }
 .buy-book button {
-  background-color: rgb(235, 22, 15);
+  background-color: rgb(204, 37, 31);
   color: white;
-  font-size: 1rem;
-  width: 90px;
-  height: 30px;
+  font-size: 1.1rem;
+  width: 100px;
+  height: 40px;
   border: none;
   border-radius: 10px;
+}
+
+.buy-book button:hover {
+  background-color: rgb(255, 8, 0);
 }

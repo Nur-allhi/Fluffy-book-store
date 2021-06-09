@@ -43,20 +43,31 @@ const Ul = styled.ul`
   }
 `;
 
+
 const RightNav = ({ open }) => {
-  const [loggedInUser] = useContext(userData)
+  const [loggedInUser, setLoggedInUser] = useContext(userData)
+  const handleSignOut = () => {
+  setLoggedInUser("")
+}
   return (
     <Ul open={open}>
       <Link to="/">
       <li>Home</li>
       </Link>
-      <Link to="/orders"><li>Orders</li></Link>
+      <Link to="/checkOut"><li>Orders</li></Link>
       <Link to="/admin"><li>Admin</li></Link>
-      <Link to="/login">
+      <li>{ loggedInUser.displayName}</li>
+      {
+        loggedInUser.email ? <li>
+          <button onClick={() => handleSignOut()}>Sign out</button> 
+      </li> : <Link to="/login">
         <li>
-          <button>{ loggedInUser.email ? loggedInUser.displayName : "Login"}</button>
+          {
+            <button>Login</button>
+          }
       </li>
       </Link>
+      }
     </Ul>
   )
 }

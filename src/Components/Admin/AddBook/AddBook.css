@@ -1,15 +1,21 @@
-.addbook-form {
-  width: auto;
-
-  border: 2px solid gray;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 20px;
-}
 .addbook-form input {
-  border-radius: 5px;
-  height: 30px;
+  border: none;
+  border-bottom: 1px solid gray;
+  /* border-radius: 5px; */
+  height: 40px;
   margin: 10px 0;
   width: 300px;
   padding: 5px;
+}
+
+.addbook-btn {
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: greenyellow;
+}
+.addbook-btn:hover {
+  background-color: limegreen;
 }

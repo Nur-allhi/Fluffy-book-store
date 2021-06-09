@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import "./Login.css";
+import googleImg from "./google.png";
 import { userData } from "../../App";
 import {
   handleAuthToken,
@@ -40,7 +41,9 @@ const Login = () => {
     <div className="login">
       <h1>Login Here or create a account</h1>
       <h3>{loggedInUser.email}</h3>
-      <button onClick={googleSignIn}>Google</button>
+      <button onClick={googleSignIn}>
+        <img src={googleImg} alt="" /> Continue with google
+      </button>
     </div>
   );
 };

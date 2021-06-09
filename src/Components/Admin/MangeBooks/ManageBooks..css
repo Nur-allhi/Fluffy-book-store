@@ -1,0 +1,13 @@
+.delete-book {
+  margin-top: 11px;
+  border: none;
+  border-radius: 8px;
+  width: 80px;
+  color: white;
+  box-shadow: 5px 8px 8px gray;
+  background-color: rgb(4, 37, 75);
+}
+
+.delete-book:hover {
+  background-color: rgb(1, 11, 22);
+}

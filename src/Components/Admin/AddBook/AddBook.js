@@ -65,7 +65,9 @@ const AddBook = () => {
       <input type="file" onChange={handleImageUpload} />
 
       <br />
-      <input type="submit" value="Add Book" />
+      <button className="addbook-btn" type="submit">
+        Add book
+      </button>
     </form>
   );
 };

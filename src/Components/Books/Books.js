@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 import { userData } from "../../App";
-
 import "./Books.css";
-// import userData from "../../App";
 
 const Books = (props) => {
   const [loggedInUser] = useContext(userData);
@@ -44,7 +42,7 @@ const Books = (props) => {
       </div>
       <div className="buy-book">
         <p>Price: ${price}</p>
-        <Link to="/orders">
+        <Link to="/checkOut">
           <button onClick={() => handleBuyBook()}>Buy Now</button>
         </Link>
       </div>

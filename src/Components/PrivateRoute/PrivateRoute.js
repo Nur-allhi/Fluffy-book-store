@@ -8,11 +8,9 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) =>
-        //   if there is data in loggendInUser :
         loggedInUser.email ? (
           children
         ) : (
-          //   else redirect to login page for authentication:
           <Redirect
             to={{
               pathname: "/login",
