@@ -1,4 +1,6 @@
 # Fluffy Book store
+[Live site](https://fluffy-book-store.web.app/)
+
 
 ### Version 0.1
 
@@ -71,5 +73,5 @@
 #### cheanges
 
 - Sign out added
-
+- Final release
 ##### Thank you.
